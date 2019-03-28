@@ -1,0 +1,167 @@
+.subMenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 0;
+}
+
+.display {
+  display: block;
+}
+
+.subMenu-item .subMenu-item-link{
+  color: red;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.dublicate-error{
+  margin-left: auto;
+  margin-right: auto;
+}
+.table{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding: 1rem;
+}
+.border-dashed{
+  border: 1px dashed black;
+  border-radius: 1rem;
+}
+.border{
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+.small-padding{
+  padding: 0.2rem;
+}
+.medium-padding{
+  padding: 0.5rem;
+}
+.tbody-border{
+  margin-top: 10px;
+  box-shadow: 0 0 0 1px black;
+  border-radius: 5px;
+}
+#tHead::after{
+  line-height: 1rem;
+  display: block;
+  content:"\200C";
+}
+
+.border-left{
+  border-left: 1px solid black;
+}
+.row-border{
+  box-shadow: 0 0 0 1px black;
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+.space{
+  line-height: 0.2rem;
+  display: block;
+  content:"\200C";
+}
+@media screen and (min-width: 1000px) {
+  #expand {
+    position: relative;
+  }
+
+   .subMenu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 2rem;;
+  }
+
+  .display {
+    display: block !important;
+    z-index: 5;
+    background-color: white;
+  }
+
+  .subMenu-item {
+    color: red;
+    font-size: 1rem;
+    font-weight: lighter;
+    border-top: 1px solid crimson;
+    border-bottom: 1px solid crimson;
+    background-color: white;
+    color: red;
+    transition: background-color 0.5s ease-in, color 0.5s ease-in;
+  }
+
+  .subMenu-item .subMenu-item-link {
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  .subMenu-item:hover{
+    background-color: red;
+    color: white;
+  }
+  .subMenu-item:hover .subMenu-item-link{
+    color:white;
+  }
+  .subMenu-item-link:hover {
+    color: white;
+  }
+  .wrapper-main{
+    display: grid;
+    min-height: 80vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    margin: 0.2rem;
+  }
+
+  .info-bar{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+  }
+  .info-bar h3{
+    grid-column: auto;
+    grid-row: 1/2;
+    text-align: center;
+    color: red;
+  }
+
+  .Inline {
+    grid-auto-columns: auto !important;
+  }
+
+  .Inline label {
+    grid-template-columns: min-content auto !important;
+    grid-row: 1/2 !important;
+    grid-column: auto !important;
+  }
+
+  .Inline label input {
+    grid-row: 1/2 !important;
+    grid-column: 2/3 !important;
+  }
+
+
+  .Inline {
+    display: grid;
+    grid-row: 1/2 !important;
+  }
+  .two-column{
+    grid-column: 1/3;
+  }
+  .table{
+
+  }
+
+}
