@@ -12,7 +12,7 @@ contactUser();
         <?php require_once('commonHeader.php'); ?>
         <div class="wrapper">
             <div class="login">
-              <h1 class="medium-text center">Login:</h1>
+              <h1 class="medium-text center">Contact Us:</h1>
                 <form class="loginForm" action="contact.php" method="post">
                   <label for="fname">First Name:&nbsp
                       <input type="text" name="fname" id="fname">
