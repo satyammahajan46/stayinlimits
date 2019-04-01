@@ -203,7 +203,8 @@ p {
   .navigation .list {
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
+    grid-auto-columns: auto;
     grid-template-rows: auto;
     justify-content: flex-end;
   }
@@ -222,7 +223,12 @@ p {
     transition: border-top-color 0.5s ease-in-out, border-bottom-color 0.5s ease-in-out;
   }
 
-  .navigation .list .item .item-link:hover {
+  .navigation .list .item .item-link:hover{
+    border-bottom-color: red;
+    border-top-color: red;
+  }
+  .navigation .list .item .item-link:focus{
+    outline: none;
     border-bottom-color: red;
     border-top-color: red;
   }
@@ -265,6 +271,11 @@ p {
 
   .footer .list .item {
     padding: 1rem;
+  }
+
+  .footer .list .item .item-link:focus {
+    outline: none;
+    text-decoration: underline;
   }
 
   .footer .list>.item {

@@ -125,7 +125,7 @@ function loginUser(){
       header("location:main.php");
     }
     else{
-      header("location:login?wep=1");
+      header("location:login.php?wep=1");
     }
   }
 }

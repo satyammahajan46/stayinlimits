@@ -10,6 +10,7 @@
         </ul>
       </li>
       <li class="item"><a tabindex="-1" class="item-link" href="logout.php">Logout</a></li>
+      <li class="item"><a tabindex="-1" class="item-link" href="#">Documentation</a></li>
     </ul>
   </nav>
 </header>
