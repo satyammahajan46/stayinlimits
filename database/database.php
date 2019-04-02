@@ -163,7 +163,7 @@ function get_table(){
         echo "<td class='center border-left'>" . $row['credit'] . "</td>";
         echo "<td class='center border-left'>" . $row['debit'] . "</td>";
         echo "</tr>";
-        echo "<td class='space' colspan='4'></td>";
+        echo "<tr><td class='space' colspan='4'></td></tr>";
       }
       echo "</tbody>";
       echo "</table>";

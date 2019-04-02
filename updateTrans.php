@@ -19,22 +19,22 @@ updateTransaction();
               <h1 class="small-text left">Update a Transaction:</h1>
                 <form class="loginForm Inline" action="updateTrans.php" method="post">
                     <label for="transID">Transaction ID:&nbsp;
-                      <input type="text" name="transID" id="transID">
+                      <input type="text" placeholder="ID" name="transID" id="transID" required>
                       <?php error_or_message('transID') ?>
                     </label>
 
                     <label for="date">Date of Transaction:&nbsp;
-                      <input type="datetime" name="date" id="date">
+                      <input type="text" placeholder="yyyy/mm/dd" name="date" id="date" data-validation="date" data-validation-format="yyyy/mm/dd" required>
                       <?php error_or_message('date') ?>
                     </label>
 
                     <label for="credit">Credit:&nbsp;
-                      <input type="number" name="credit" id="credit">
+                      <input type="number" placeholder="Eg: 99" name="credit" id="credit" required>
                       <?php error_or_message('credit') ?>
                     </label>
 
                     <label for="debit">Debit:&nbsp;
-                      <input type="number" name="debit" id="debit">
+                      <input type="number" placeholder="Eg: 99" name="debit" id="debit" required>
                       <?php error_or_message('debit') ?>
                     </label>
 
@@ -45,6 +45,7 @@ updateTransaction();
             <?php error_or_message('dublicate') ?>
           </div>
         </div>
+      </div>
         <?php require_once('commonFooter.php'); ?>
     </body>
 </html>

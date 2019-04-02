@@ -14,15 +14,12 @@ loginUser();
             <div class="login">
               <h1 class="medium-text center">Login:</h1>
                 <form class="loginForm" action="login.php" method="post">
-                    <label for="email">Email:&nbsp
-
-                        <input type="text" data-validation="email" name="email" id="email">
-
-
+                    <label for="email">Email:&nbsp;
+                        <input type="text" placeholder="example@example.com" data-validation="email" name="email" id="email" required>
                     </label>
                     <?php error_or_message('email') ?>
-                    <label for="password">Password:&nbsp
-                        <input type="password" name="password" id="password">
+                    <label for="password">Password:&nbsp;
+                        <input type="password" placeholder="Password" name="password" id="password" required>
                     </label>
                     <button class="submit" type="submit" name="submit">Submit</button>
                 </form>
