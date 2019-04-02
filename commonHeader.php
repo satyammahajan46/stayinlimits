@@ -5,7 +5,7 @@
       <li class="item"><a class="item-link" href="index.php">Home</a></li>
       <li class="item"><a tabindex="-1" class="item-link" href="login.php">Login</a></li>
       <li class="item"><a tabindex="-1" class="item-link" href="register.php">Register</a></li>
-      <li class="item"><a tabindex="-1" class="item-link" href="#">Documentation</a></li>
+      <li class="item"><a tabindex="-1" class="item-link" href="documentation.php">Documentation</a></li>
     </ul>
   </nav>
 </header>

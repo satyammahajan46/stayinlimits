@@ -26,10 +26,11 @@ function registerUser(){
   if($_SERVER["REQUEST_METHOD"] == "POST" && $valid){
     $query = "INSERT INTO users (fname, lname, email, password, gender, account) VALUES (:fname, lname, :email, :password, :gender, :account);";
     $statement = $pdo->prepare($query);
+
     $statement->bindValue(':fname',$_POST['fname']);
     $statement->bindValue(':lname',$_POST['lname']);
     $statement->bindValue(':email',$_POST['email']);
-    $statement->bindValue(':password', $_POST['password']);
+    $statement->bindValue(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
     $statement->bindValue(':gender', $_POST['gender']);
     $statement->bindValue(':account', $_POST['account']);
     $statement->execute();
