@@ -21,7 +21,7 @@ contactUser();
                       <input type="text" placeholder="Last Name" name="lname" id="lname" required>
                   </label>
                     <label for="email">Email:&nbsp;
-                        <input type="email"placeholder="example@example.com" data-validation="email" name="email" id="email">
+                        <input type="email" placeholder="example@example.com" data-validation="email" name="email" id="email">
                     </label>
                     <label for="text">Comments:&nbsp;
                       <textarea id='text' placeholder="Enter text here" name="message" rows="5" cols="30" required></textarea>

@@ -43,6 +43,7 @@ addTransaction();
           </div>
           <div class="dublicate-error">
             <?php error_or_message('dublicate') ?>
+            <?php error_or_message('addTrans') ?>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ registerUser();
         <?php require_once('commonHeader.php'); ?>
         <div class="wrapper">
             <div class="login">
-              <h1 class="medium-text center">Register:</h1>
+              <h1 class="medium-text center">Register your account:</h1>
                 <form class="loginForm" action="register.php" method="post">
                   <label for="fname">First Name:&nbsp;
                       <input type="text" placeholder="First Name" name="fname" id="fname" required>
@@ -64,6 +64,14 @@ registerUser();
                     </div>
                     <button class="submit" type="submit" name="submit">Submit</button>
                 </form>
+                <?php
+                  if(isset($_GET["succ"])&& $_GET['succ']==1){
+                    echo "<p id='suc' style = 'text-align:center; color:red;'>Successfull</p>";
+                  }
+                  if(isset($_GET["succ"])&& $_GET['succ']==0){
+                    echo "<p id='suc' style = 'text-align:center; color:red;'>Error</p>";
+                  }
+                 ?>
             </div>
             <div class="banner">
                 <h1>Available on following</h1>

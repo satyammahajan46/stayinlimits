@@ -1,4 +1,16 @@
 $(function(){
+  //to make sure submenu don't stay open after user left them open and started
+  //doing something else
+  $('*').on('click', function(){
+    let item = $('.subMenu');
+    let focusCheck = $(".expand .item-link");
+    if(!focusCheck.is(":focus")){
+      if(item.hasClass("display")){
+        item.removeClass("display");
+      }
+    }
+  });
+  //basic key functionality over navigation item
   $(".list .item .item-link ").on("keydown", function(event){
     //select the li item
     let item = $(this).parent();
@@ -21,15 +33,17 @@ $(function(){
       }
     }
   });
-  $(".list #expand .item-link").on("keydown", function(event){
+  //To open submenu's
+  $(".list .expand .item-link").on("keydown", function(event){
     //select the li item
     let item = $(this).parent();
     if(event.key == "ArrowDown" || event.key == " " || event.key == "Enter"){
       event.preventDefault();
       item.find(".subMenu").toggleClass("display");
-      $(".subMenu").children().children().eq(0).focus();
+      item.find(".subMenu").children().children().eq(0).focus();
     }
   });
+  //Key functionality in submenu's
   $(".subMenu .subMenu-item .subMenu-item-link").on("keydown", function(){
     //select the li item
     let item = $(this).parent();

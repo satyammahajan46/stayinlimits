@@ -70,8 +70,22 @@
   display: block;
   content:"\200C";
 }
+.image-container{
+  width:100%;
+}
+
+.image-container .image{
+  border: 1px solid red;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.image-container .image img{
+  object-fit: cover;
+  height: auto;
+  width: 200px;
+}
 @media screen and (min-width: 1000px) {
-  #expand {
+  .expand {
     position: relative;
   }
 
@@ -111,6 +125,7 @@
     width: auto;
     height: auto;
     display: block;
+    overflow-wrap: break-word;
   }
 
   /* .subMenu-item:hover{
@@ -164,6 +179,9 @@
     grid-column: 2/3 !important;
   }
 
+  .Inline .submit{
+    grid-column: auto !important;
+  }
 
   .Inline {
     display: grid;
@@ -187,5 +205,18 @@
       transform: scaleX(1);
     }
   }
-
+  .image-container{
+    display: block;
+  }
+  .image-container .image{
+    border: 1px solid red;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .image-container .image img{
+    margin: 1rem;
+    object-fit: cover;
+    height: 500px;
+    width: auto;
+  }
 }

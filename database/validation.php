@@ -1,7 +1,7 @@
 <?php
 $valid = false;
 $messages = array();
-
+//Validate the login form
 function validateLogin(){
   global $valid;
   global $messages;
@@ -19,7 +19,7 @@ function validateLogin(){
      }
   }
 }
-
+//Function to validate registration form
 function validateRegistration(){
   global $valid;
   global $messages;
@@ -98,14 +98,14 @@ function validateRegistration(){
     }
   }
 }
-
+//Function to print error or a message occurred during validate or database handling
 function error_or_message($value){
   global $messages;
   if(isset($messages[$value])){
     echo "<p class='two-column center' style='color:red'>". $messages[$value] ."</p>";
   }
 }
-
+//Function to validate addtransaction form
 function validateAddTrans(){
   global $valid;
   global $messages;
@@ -141,6 +141,9 @@ function validateAddTrans(){
          if($valid && $subValid){
            $valid = true;
          }
+         else{
+           $valid = false;
+         }
      }
 
      if(isset($_POST['credit'])){
@@ -159,6 +162,9 @@ function validateAddTrans(){
        if($valid && $subValid){
          $valid = true;
        }
+       else{
+         $valid = false;
+       }
      }
 
      if(isset($_POST['debit'])){
@@ -176,6 +182,9 @@ function validateAddTrans(){
        }
        if($valid && $subValid){
          $valid = true;
+       }
+       else{
+         $valid = false;
        }
      }
   }
